@@ -4,7 +4,10 @@ import { ArgumentError } from './exceptions';
 /**
  * Checks if all numbers in a series of numbers are all approximately
  * equal to each other.
- * This function runs in `O(2n)` time, where `n` is the length of the array.
+ *
+ * This function runs in `O(n)` time (2 passes), where `n` is the
+ * length of the array.
+ *
  * @param numbers - a sequence of numbers
  * @returns Whether or not all numbers are all approximately equal
  */
