@@ -5,6 +5,8 @@
 
 This package's name is currently a WIP. Currently contains a somewhat random assortion of utilities in TypeScript.
 
+Most of this code was originally written back in 2021-ish in a private repository, which I've recently decided to take the time to clean it up and republish. 😋
+
 ## Install
 
 > **Warning**:
