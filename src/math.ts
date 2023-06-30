@@ -1,4 +1,4 @@
-import { areAllEqual } from "collections";
+import { areAllEqual } from 'collections';
 
 
 /**

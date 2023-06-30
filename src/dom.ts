@@ -95,7 +95,7 @@ export function createAttribute(name: string, value: string): Attr {
  * @param element - the target element
  * @param attributes - an array of HTML attributes
  */
- export function setAttributeNodes(element: Element, attributes: Attr[]): void {
+export function setAttributeNodes(element: Element, attributes: Attr[]): void {
 	for (const attribute of attributes) {
 		element.setAttributeNode(attribute);
 	}

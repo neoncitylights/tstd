@@ -1,5 +1,5 @@
-import { areAllEqual } from "collections";
-import { isBetweenInclusive } from "./range";
+import { areAllEqual } from 'collections';
+import { isBetweenInclusive } from './range';
 
 export * from './consts';
 export * from './range';

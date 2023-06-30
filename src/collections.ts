@@ -1,5 +1,5 @@
-import { ArrayIterFn, Primitive } from ".";
-import { ArgumentError } from "exceptions";
+import { ArrayIterFn, Primitive } from '.';
+import { ArgumentError } from './exceptions';
 
 /**
  * Checks if all numbers in a series of numbers are all approximately

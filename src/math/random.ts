@@ -112,7 +112,7 @@ export function getRandArrayFloat(
 export function getRandArrayInt(
 	length: number,
 	min: number,
-	max: number
+	max: number,
 ): number[] {
 	const randomArray = [];
 	for (let i = 0; i < length; i++) {

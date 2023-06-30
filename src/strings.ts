@@ -10,11 +10,11 @@
  */
 export function stringIsNullOrEmpty(value: string|null): value is null|string {
 	return (
-			typeof value === 'string'
+		typeof value === 'string'
 			&& value.length === 0
 			&& value === ''
-		)
-		|| value === null
+	)
+		|| value === null;
 }
 
 export function truncateString(value: string, maxLength: number): string {
@@ -31,7 +31,7 @@ export function truncateString(value: string, maxLength: number): string {
 export function truncateStringMiddle(
 	value: string,
 	maxLength: number,
-	separator: string = '\u2026'
+	separator: string = '\u2026',
 ): string {
 	if (value.length <= maxLength) { return value; }
 

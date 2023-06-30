@@ -1,4 +1,4 @@
-import * as consts from "./consts";
+import * as consts from './consts';
 
 /**
  * Models a closed interval (`min ≤ value ≤ max`), where the closed interval
