@@ -83,23 +83,6 @@ export function chunk<T>(items: T[], maxSize: number): T[][] {
 }
 
 /**
- * A similar function as chunk<T>(), except each chunk represents a substring,
- * and the returning value is a 1-dimensional array of strings (`string[]`).
- * @param value - a string to equally chunk into substrings as much as possible
- * @param maxSize - the maximum size a chunk can be
- */
-export function chunkString(value: string, maxSize: number): string[] {
-	const numChunks = Math.ceil(value.length / maxSize);
-	const chunks = new Array<string>(numChunks);
-
-	for (let i = 0, k = 0; i < numChunks; i++, k += maxSize) {
-		chunks[i] = value.substr(k, maxSize);
-	}
-
-	return chunks;
-}
-
-/**
  * Generic function for iterating an array in reverse, without mutating
  * the original array via `Array.prototype.reverse()`. This method is akin
  * to `Array.prototype.forEach()`
