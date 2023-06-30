@@ -7,5 +7,8 @@ export type Nullable<T> = T | null;
 export type Nullish = null | undefined;
 export type Falsy = false | '' | 0 | null | undefined;
 
-export * as arrays from './collections';
+export * as collections from './collections';
+export * as dom from './dom';
 export * as exceptions from './exceptions';
+export * as math from './math';
+export * as strings from './strings';

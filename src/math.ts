@@ -1,5 +1,4 @@
-import { areAllEqual } from 'collections';
-
+import { areAllEqual } from './collections';
 
 /**
  * Models a closed interval (`min ≤ value ≤ max`), where the closed interval
