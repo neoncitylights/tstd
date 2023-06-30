@@ -1,30 +1,30 @@
 {
-	"name": "@author/package",
+	"name": "@neoncitylights/ts-utils",
 	"version": "0.0.0",
-	"description": "{description}",
+	"description": "A TypeScript library with a (somewhat) random assortion of utilities ",
 	"license": "MIT",
 	"author": {
 		"name": "Samantha",
-		"url": "https://github.com/{libauthor}"
+		"url": "https://github.com/neoncitylights"
 	},
 	"keywords": [
 		"typescript"
 	],
-	"bugs": "https://github.com/{libauthor}/{libname}/issues",
+	"bugs": "https://github.com/neoncitylights/ts-utils/issues",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/{libauthor}/{libname}.git"
+		"url": "git+https://github.com/neoncitylights/ts-utils.git"
 	},
 	"funding": {
 		"type": "individual",
-		"url": "https://github.com/sponsors/{libauthor}"
+		"url": "https://github.com/sponsors/neoncitylights"
 	},
-	"main": "./dist/{libname}.umd.js",
-	"module": "./dist/{libname}.es.js",
+	"main": "./dist/ts-utils.umd.js",
+	"module": "./dist/ts-utils.es.js",
 	"exports": {
 		".": {
-			"import": "./dist/{libname}.es.js",
-			"require": "./dist/{libname}.umd.js"
+			"import": "./dist/ts-utils.es.js",
+			"require": "./dist/ts-utils.umd.js"
 		}
 	},
 	"types": "./dist/index.d.ts",

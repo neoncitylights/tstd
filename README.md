@@ -1,5 +1,5 @@
 # Node.js & TypeScript Template
-This repository template makes it easier to create a new NPM library, package or application using Node.js and TypeScript. It comes with several developer tools pre-configured and ready to use, so it's easier to get started.
+This package's name is currently a WIP. Currently contains a somewhat random assortion of utilities in TypeScript.
 
 ## Features
   - [x] [Node.js](https://nodejs.org/) and [TypeScript](https://www.typescriptlang.org/) [v5.0](https://www.typescriptlang.org/docs/handbook/release-notes/overview.html) support
@@ -13,14 +13,14 @@ This repository template makes it easier to create a new NPM library, package or
 
 ## Getting started
 ```shell
-gh repo create {repo-name} --public --clone --template neoncitylights/node-ts-template
+gh repo create {repo-name} --public --clone --template neoncitylights/ts-utils
 ```
 
  1. Open up Visual Studio Code
  2. Click on the 'Search' icon on the primary left side bar. This opens up [project-wide search](https://code.visualstudio.com/docs/editor/codebasics#_search-across-files) so you can mass find-and-replace.
     1. `@author/package`: Replace this with the name of your package. This can be scoped under a user/organization (e.g `@samantha/my-really-cool-package`). **Note**: This placeholder is different than the others to avoid warnings from the NPM client.
-    2. `{libauthor}`: Replace this with your GitHub/npm username, or the name of your organization.
-    3. `{libname}`: Replace this with the name of your library.
+    2. `neoncitylights`: Replace this with your GitHub/npm username, or the name of your organization.
+    3. `ts-utils`: Replace this with the name of your library.
     4. `neonctylights/node-ts-template`: Replace this with the name of your repository (these occur in the badge URLs inside the `README.md` file).
  3. Delete this `README.md`, and rename [`LIBRARY.md`](./LIBRARY.md) to `README.md`.
 
