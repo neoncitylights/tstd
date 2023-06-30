@@ -6,8 +6,8 @@ export default defineConfig({
 	build: {
 		lib: {
 			entry: path.resolve(__dirname, 'src/index.ts'),
-			name: '{libname}',
-			fileName: (format) => `{libname}.${format}.js`
+			name: 'ts-utils',
+			fileName: (format) => `ts-utils.${format}.js`
 		}
 	},
 	plugins: [

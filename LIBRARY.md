@@ -1,13 +1,17 @@
-# `@{libauthor}/{libname}`
+# `@neoncitylights/ts-utils`
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![GitHub deployments](https://img.shields.io/github/deployments/neoncitylights/node-ts-template/github-pages?label=deploy)](https://github.com/neoncitylights/node-ts-template/deployments/activity_log?environment=github-pages)
-[![Node.js workflow](https://github.com/neoncitylights/node-ts-template/actions/workflows/main.yml/badge.svg)](https://github.com/neoncitylights/node-ts-template/actions/workflows/main.yml)
+[![GitHub deployments](https://img.shields.io/github/deployments/neoncitylights/ts-utils/github-pages?label=deploy)](https://github.com/neoncitylights/ts-utils/deployments/activity_log?environment=github-pages)
+[![Node.js workflow](https://github.com/neoncitylights/ts-utils/actions/workflows/main.yml/badge.svg)](https://github.com/neoncitylights/ts-utils/actions/workflows/main.yml)
 
-Describe the library.
+This package's name is currently a WIP. Currently contains a somewhat random assortion of utilities in TypeScript.
 
 ## Install
+
+> **Warning**:
+> This package is not actually published on NPM yet, but will be soon!
+
 ```
-npm install @{libauthor}/{libname}
+npm install @neoncitylights/ts-utils
 ```
 
 ## License
