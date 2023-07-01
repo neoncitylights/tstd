@@ -1,4 +1,4 @@
-import { areAllEqual } from './../collections';
+import { areAllEqual, sortNumsAsc } from './../collections';
 import { isBetweenInclusive } from './range';
 
 export * from './consts';
@@ -130,7 +130,7 @@ export function getMedian(numbers: number[]): number {
 	if (numbers.length === 0) { return Number.NaN; }
 	if (numbers.length === 1) { return numbers[0]; }
 
-	numbers.sort((a, b) => { return a - b; });
+	sortNumsAsc(numbers);
 	const half = numbers.length / 2;
 	if (numbers.length % 2 !== 0) {
 		return numbers[Math.floor(half)];
@@ -197,7 +197,7 @@ export function getMeanAbsoluteDeviation(numbers: number[]): number {
 export function getMedianAbsoluteDeviation(numbers: number[]): number {
 	const median = getMedian(numbers);
 	const deviations: number[] = [];
-	numbers.sort();
+	sortNumsAsc(numbers);
 
 	for(const number of numbers) {
 		deviations.push(Math.abs(number - median));
