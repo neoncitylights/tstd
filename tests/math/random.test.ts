@@ -1,12 +1,12 @@
 import { describe, expect, expectTypeOf, test } from 'vitest';
 import {
-	getRandString,
-	getRandItem,
-	getAbsoluteFrequency,
-	getRandBool,
-	getRandArrayF32,
 	F32_MIN,
 	F32_MAX,
+	getAbsoluteFrequency,
+	getRandArrayF32,
+	getRandBool,
+	getRandItem,
+	getRandString,
 } from '../../src/math';
 
 describe('getRandString()', () => {
