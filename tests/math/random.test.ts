@@ -22,12 +22,21 @@ import {
 } from '../../src/math';
 
 describe('random', () => {
-	test('string', () => {
-		const random = getRandString(24, ['A', 'B', 'C', 'D']);
-		expect(random.length).toBe(24);
-		expect(Array.from(getAbsoluteFrequency(random.split('')).keys()).sort()).toStrictEqual(
-			['A', 'B', 'C', 'D'],
-		);
+	describe('string', () => {
+		test('from an array of characters', () => {
+			const random = getRandString(24, ['A', 'B', 'C', 'D']);
+			expect(random.length).toBe(24);
+			expect(Array.from(getAbsoluteFrequency(random.split('')).keys()).sort()).toStrictEqual(
+				['A', 'B', 'C', 'D'],
+			);
+		})
+		test('from a string of characters', () => {
+			const random = getRandString(24, 'ABCD');
+			expect(random.length).toBe(24);
+			expect(Array.from(getAbsoluteFrequency(random.split('')).keys()).sort()).toStrictEqual(
+				['A', 'B', 'C', 'D'],
+			);
+		})
 	})
 
 	test('boolean', () => {
