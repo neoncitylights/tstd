@@ -1,6 +1,6 @@
 import { describe, expect, expectTypeOf, test } from 'vitest';
 import {
-	getRandomString,
+	getRandString,
 	getRandItem,
 	getAbsoluteFrequency,
 	getRandBool,
@@ -9,9 +9,9 @@ import {
 	F32_MAX,
 } from '../../src/math';
 
-describe('getRandomString()', () => {
+describe('getRandString()', () => {
 	test('random string generates to constraints', () => {
-		const random = getRandomString(24, ['A', 'B', 'C', 'D']);
+		const random = getRandString(24, ['A', 'B', 'C', 'D']);
 		expect(random.length).toBe(24);
 		expect(Array.from(getAbsoluteFrequency(random.split('')).keys()).sort()).toStrictEqual(
 			['A', 'B', 'C', 'D'],
