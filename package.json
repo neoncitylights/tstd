@@ -19,12 +19,12 @@
 		"type": "individual",
 		"url": "https://github.com/sponsors/neoncitylights"
 	},
-	"main": "./dist/stdlib.umd.js",
-	"module": "./dist/stdlib.es.js",
+	"main": "./dist/neoncitylights_stdlib.umd.js",
+	"module": "./dist/neoncitylights_stdlib.es.js",
 	"exports": {
 		".": {
-			"import": "./dist/stdlib.es.js",
-			"require": "./dist/stdlib.umd.js"
+			"import": "./dist/neoncitylights_stdlib.es.js",
+			"require": "./dist/neoncitylights_stdlib.umd.js"
 		}
 	},
 	"types": "./dist/index.d.ts",
