@@ -7,6 +7,9 @@ import {
 	clampU16,
 	clampU32,
 	isBetweenInclusive,
+	clampF32,
+	F32_MIN,
+	F32_MAX,
 } from '../../src/math';
 
 describe('isBetweenInclusive()', () => {
@@ -47,6 +50,10 @@ describe('clamp', () => {
 		test('32-bit integer', () => {
 			expectToBeBetweenInclusive(clampU32(5000000000), 0, 4294967295);
 		})
+	})
+
+	test('32-bit float', () => {
+		expectToBeBetweenInclusive(clampF32(0.5), F32_MIN, F32_MAX);
 	})
 })
 
