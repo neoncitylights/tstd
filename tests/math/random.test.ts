@@ -7,6 +7,12 @@ import {
 	getRandBool,
 	getRandItem,
 	getRandString,
+	getRandU8,
+	getRandU16,
+	getRandU32,
+	getRandI8,
+	getRandI16,
+	getRandI32,
 } from '../../src/math';
 
 describe('getRandString()', () => {
@@ -44,3 +50,53 @@ describe('getRandArrayF32()', () => {
 	});
 });
 
+describe('getRandI8()', () => {
+	test('randomly generates between -128 and 127', () => {
+		const random = getRandI8();
+		expectToBeBetweenInclusive(random, -128, 127);
+	})
+})
+
+describe('getRandI16()', () => {
+	test('randomly generates between -32768 and 32767', () => {
+		const random = getRandI16();
+		expectToBeBetweenInclusive(random, -32768, 32767);
+	})
+})
+
+describe('getRandI32()', () => {
+	test('randomly generates between -2147483648 and 2147483647', () => {
+		const random = getRandI32();
+		expectToBeBetweenInclusive(random, -2147483648, 2147483647);
+	})
+})
+
+describe('getRandU8()', () => {
+	test('randomly generates between 0 and 255', () => {
+		const random = getRandU8();
+		expectToBeBetweenInclusive(random, 0, 255);
+	})
+})
+
+describe('getRandU16()', () => {
+	test('randomly generates between 0 and 65535', () => {
+		const random = getRandU16();
+		expectToBeBetweenInclusive(random, 0, 65535);
+	})
+})
+
+describe('getRandU32()', () => {
+	test('randomly generates between 0 and 4294967295', () => {
+		const random = getRandU32();
+		expectToBeBetweenInclusive(random, 0, 4294967295);
+	})
+})
+
+function expectToBeBetweenInclusive(
+	value: number,
+	min: number,
+	max: number,
+) {
+	expect(value).toBeGreaterThanOrEqual(min);
+	expect(value).toBeLessThanOrEqual(max);
+}

@@ -202,20 +202,20 @@ export function getRandI32(): number {
 /**
  * Generates a number within the inclusive range of an unsigned 8-bit integer
  */
-export function getRandomU8(): number {
-	return getRandInt(consts.I8_MIN, consts.I8_MAX);
+export function getRandU8(): number {
+	return getRandInt(consts.U8_MIN, consts.U8_MAX);
 }
 
 /**
  * Generates a number within the inclusive range of a 16-bit unsigned integer
  */
-export function getRandomU16(): number {
-	return getRandInt(consts.I16_MIN, consts.I16_MAX);
+export function getRandU16(): number {
+	return getRandInt(consts.U16_MIN, consts.U16_MAX);
 }
 
 /**
  * Generates a number within the inclusive range of a 32-bit unsigned integer
  */
-export function getRandomU32(): number {
-	return getRandInt(consts.I32_MIN, consts.I32_MAX);
+export function getRandU32(): number {
+	return getRandInt(consts.U32_MIN, consts.U32_MAX);
 }
