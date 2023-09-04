@@ -1,5 +1,13 @@
 import { describe, expect, test } from 'vitest';
-import { getRandI16, getRandI32, getRandI8, getRandU16, getRandU8, getRandU32, isBetweenInclusive, clampI8, clampI16, clampI32, clampU8, clampU16, clampU32 } from '../../src/math';
+import {
+	clampI8,
+	clampI16,
+	clampI32,
+	clampU8,
+	clampU16,
+	clampU32,
+	isBetweenInclusive,
+} from '../../src/math';
 
 describe('isBetweenInclusive()', () => {
 	test('inclusive interval comparison returns true', () => {

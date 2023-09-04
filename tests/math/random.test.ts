@@ -16,9 +16,9 @@ import {
 	getRandArrayI8,
 	getRandArrayI16,
 	getRandArrayI32,
+	getRandArrayU8,
 	getRandArrayU16,
 	getRandArrayU32,
-	getRandArrayU8,
 } from '../../src/math';
 
 describe('random', () => {
