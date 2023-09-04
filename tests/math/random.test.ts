@@ -13,82 +13,131 @@ import {
 	getRandI8,
 	getRandI16,
 	getRandI32,
+	getRandArrayI8,
+	getRandArrayI16,
+	getRandArrayI32,
+	getRandArrayU16,
+	getRandArrayU32,
+	getRandArrayU8,
 } from '../../src/math';
 
-describe('getRandString()', () => {
-	test('random string generates to constraints', () => {
-		const random = getRandString(24, ['A', 'B', 'C', 'D']);
-		expect(random.length).toBe(24);
-		expect(Array.from(getAbsoluteFrequency(random.split('')).keys()).sort()).toStrictEqual(
-			['A', 'B', 'C', 'D'],
-		);
-	});
-});
-
-describe('getRandItem()', () => {
-	test('gets a random item out of an array', () => {
-		const items = [0, 15, 180, 24, -35, -62, -9, 10];
-		const randomItem = getRandItem<number>(items);
-		expect(items.includes(randomItem)).toBe(true);
-	});
-});
-
-describe('getRandBool()', () => {
-	test('gets a random boolean', () => {
-		expectTypeOf(getRandBool()).toBeBoolean();
-	});
-});
-
-describe('getRandArrayF32()', () => {
-	test('Randomly generating an Float32Array generates an array within the float32 range', () => {
-		const random = getRandArrayF32(25);
-		expect(random).toBeInstanceOf(Float32Array);
-		random.forEach(n => {
-			expect(n).toBeGreaterThanOrEqual(F32_MIN);
-			expect(n).toBeLessThanOrEqual(F32_MAX);
+describe('random', () => {
+	describe('string', () => {
+		test('generates to constraints', () => {
+			const random = getRandString(24, ['A', 'B', 'C', 'D']);
+			expect(random.length).toBe(24);
+			expect(Array.from(getAbsoluteFrequency(random.split('')).keys()).sort()).toStrictEqual(
+				['A', 'B', 'C', 'D'],
+			);
 		});
-	});
-});
-
-describe('getRandI8()', () => {
-	test('randomly generates between -128 and 127', () => {
-		const random = getRandI8();
-		expectToBeBetweenInclusive(random, -128, 127);
 	})
-})
 
-describe('getRandI16()', () => {
-	test('randomly generates between -32768 and 32767', () => {
-		const random = getRandI16();
-		expectToBeBetweenInclusive(random, -32768, 32767);
+	describe('boolean', () => {
+		test('gets a random boolean', () => {
+			expectTypeOf(getRandBool()).toBeBoolean();
+		});
 	})
-})
 
-describe('getRandI32()', () => {
-	test('randomly generates between -2147483648 and 2147483647', () => {
-		const random = getRandI32();
-		expectToBeBetweenInclusive(random, -2147483648, 2147483647);
+	describe('item in array', () => {
+		test('gets a random item out of an array', () => {
+			const items = [0, 15, 180, 24, -35, -62, -9, 10];
+			const randomItem = getRandItem<number>(items);
+			expect(items.includes(randomItem)).toBe(true);
+		});
 	})
-})
 
-describe('getRandU8()', () => {
-	test('randomly generates between 0 and 255', () => {
-		const random = getRandU8();
-		expectToBeBetweenInclusive(random, 0, 255);
+	describe('signed', () => {
+		describe('8-bit integer', () => {
+			test('generates between [-128, 127]', () => {
+				expectToBeBetweenInclusive(getRandI8(), -128, 127);
+			})
+		})
+		describe('16-bit integer', () => {
+			test('generates between [-32768, 32767]', () => {
+				expectToBeBetweenInclusive(getRandI16(), -32768, 32767);
+			})
+		})
+		describe('32-bit integer', () => {
+			test('generates between [-2147483648, 2147483647]', () => {
+				expectToBeBetweenInclusive(getRandI32(), -2147483648, 2147483647);
+			})
+		})
 	})
-})
-
-describe('getRandU16()', () => {
-	test('randomly generates between 0 and 65535', () => {
-		const random = getRandU16();
-		expectToBeBetweenInclusive(random, 0, 65535);
+	describe('unsigned', () => {
+		describe('8-bit integer', () => {
+			test('generates between [0, 255]', () => {
+				expectToBeBetweenInclusive(getRandU8(), 0, 255);
+			})
+		})
+		describe('16-bit integer', () => {
+			test('generates between [0, 65535]', () => {
+				expectToBeBetweenInclusive(getRandU16(), 0, 65535);
+			})
+		})
+		describe('32-bit integer', () => {
+			test('generates between [0, 4294967295]', () => {
+				expectToBeBetweenInclusive(getRandU32(), 0, 4294967295);
+			})
+		})
 	})
-})
 
-describe('getRandU32()', () => {
-	test('randomly generates between 0 and 4294967295', () => {
-		const random = getRandU32();
-		expectToBeBetweenInclusive(random, 0, 4294967295);
+	describe('typed array of', () => {
+		test('32-bit floats', () => {
+			const random = getRandArrayF32(25);
+			expect(random).toBeInstanceOf(Float32Array);
+			random.forEach(n => {
+				expect(n).toBeGreaterThanOrEqual(F32_MIN);
+				expect(n).toBeLessThanOrEqual(F32_MAX);
+			});
+		})
+
+		describe('signed', () => {
+			test('8-bit integers', () => {
+				const random = getRandArrayI8(25);
+				expect(random).toBeInstanceOf(Int8Array);
+				random.forEach(n => {
+					expectToBeBetweenInclusive(n, -128, 127);
+				})
+			})
+			test('16-bit integers', () => {
+				const random = getRandArrayI16(25);
+				expect(random).toBeInstanceOf(Int16Array);
+				random.forEach(n => {
+					expectToBeBetweenInclusive(n, -32768, 32767);
+				})
+			})
+			test('32-bit integers', () => {
+				const random = getRandArrayI32(25);
+				expect(random).toBeInstanceOf(Int32Array);
+				random.forEach(n => {
+					expectToBeBetweenInclusive(n, -2147483648, 2147483647);
+				})
+			})
+		})
+
+		describe('unsigned', () => {
+			test('8-bit integers', () => {
+				const random = getRandArrayU8(25);
+				expect(random).toBeInstanceOf(Uint8Array);
+				random.forEach(n => {
+					expectToBeBetweenInclusive(n, 0, 255);
+				})
+			})
+			test('16-bit integers', () => {
+				const random = getRandArrayU16(25);
+				expect(random).toBeInstanceOf(Uint16Array);
+				random.forEach(n => {
+					expectToBeBetweenInclusive(n, 0, 65535);
+				})
+			})
+			test('32-bit integers', () => {
+				const random = getRandArrayU32(25);
+				expect(random).toBeInstanceOf(Uint32Array);
+				random.forEach(n => {
+					expectToBeBetweenInclusive(n, 0, 4294967295);
+				})
+			})
+		})
 	})
 })
 
