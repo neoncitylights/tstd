@@ -56,7 +56,7 @@ export function getRandItem<T>(array: T[]): T {
 	return array[getRandInt(0, array.length - 1)];
 }
 
-export function getRandomString(length: number, characters: string|string[]): string {
+export function getRandString(length: number, characters: string|string[]): string {
 	const pool: string[] = typeof characters === 'string'
 		? characters.split('')
 		: characters;
