@@ -1,5 +1,5 @@
 {
-	"name": "@neoncitylights/ts-utils",
+	"name": "@neoncitylights/stdlib",
 	"version": "0.0.0",
 	"description": "A TypeScript library with a (somewhat) random assortion of utilities ",
 	"license": "MIT",
@@ -10,21 +10,21 @@
 	"keywords": [
 		"typescript"
 	],
-	"bugs": "https://github.com/neoncitylights/ts-utils/issues",
+	"bugs": "https://github.com/neoncitylights/stdlib/issues",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/neoncitylights/ts-utils.git"
+		"url": "git+https://github.com/neoncitylights/stdlib.git"
 	},
 	"funding": {
 		"type": "individual",
 		"url": "https://github.com/sponsors/neoncitylights"
 	},
-	"main": "./dist/ts-utils.umd.js",
-	"module": "./dist/ts-utils.es.js",
+	"main": "./dist/stdlib.umd.js",
+	"module": "./dist/stdlib.es.js",
 	"exports": {
 		".": {
-			"import": "./dist/ts-utils.es.js",
-			"require": "./dist/ts-utils.umd.js"
+			"import": "./dist/stdlib.es.js",
+			"require": "./dist/stdlib.umd.js"
 		}
 	},
 	"types": "./dist/index.d.ts",
