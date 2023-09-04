@@ -150,7 +150,7 @@ export function getRandArrayI16(length: number): Int16Array {
  * Generates a `Int32Array` of n length with random 32-bit signed integers
  * @param length - Length of the array
  */
-export function getRandArrayInt32(length: number): Int32Array {
+export function getRandArrayI32(length: number): Int32Array {
 	return Int32Array.from(getRandArrayInt(length, consts.I32_MIN, consts.I32_MAX));
 }
 
