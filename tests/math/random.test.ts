@@ -22,28 +22,22 @@ import {
 } from '../../src/math';
 
 describe('random', () => {
-	describe('string', () => {
-		test('generates to constraints', () => {
-			const random = getRandString(24, ['A', 'B', 'C', 'D']);
-			expect(random.length).toBe(24);
-			expect(Array.from(getAbsoluteFrequency(random.split('')).keys()).sort()).toStrictEqual(
-				['A', 'B', 'C', 'D'],
-			);
-		});
+	test('string', () => {
+		const random = getRandString(24, ['A', 'B', 'C', 'D']);
+		expect(random.length).toBe(24);
+		expect(Array.from(getAbsoluteFrequency(random.split('')).keys()).sort()).toStrictEqual(
+			['A', 'B', 'C', 'D'],
+		);
 	})
 
-	describe('boolean', () => {
-		test('gets a random boolean', () => {
-			expectTypeOf(getRandBool()).toBeBoolean();
-		});
+	test('boolean', () => {
+		expectTypeOf(getRandBool()).toBeBoolean();
 	})
 
-	describe('item in array', () => {
-		test('gets a random item out of an array', () => {
-			const items = [0, 15, 180, 24, -35, -62, -9, 10];
-			const randomItem = getRandItem<number>(items);
-			expect(items.includes(randomItem)).toBe(true);
-		});
+	test('item in array', () => {
+		const items = [0, 15, 180, 24, -35, -62, -9, 10];
+		const randomItem = getRandItem<number>(items);
+		expect(items.includes(randomItem)).toBe(true);
 	})
 
 	describe('signed', () => {
