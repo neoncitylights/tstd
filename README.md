@@ -1,7 +1,6 @@
 # `@neoncitylights/stdlib`
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![GitHub deployments](https://img.shields.io/github/deployments/neoncitylights/stdlib/github-pages?label=deploy)](https://github.com/neoncitylights/stdlib/deployments/activity_log?environment=github-pages)
-[![Node.js workflow](https://github.com/neoncitylights/stdlib/actions/workflows/main.yml/badge.svg)](https://github.com/neoncitylights/stdlib/actions/workflows/main.yml)
+[![Node.js workflow](https://github.com/neoncitylights/ts-stdlib/actions/workflows/main.yml/badge.svg)](https://github.com/neoncitylights/ts-stdlib/actions/workflows/main.yml)
 
 This package's name is currently a WIP. Currently contains a somewhat random assortion of utilities in TypeScript.
 
