@@ -2,8 +2,8 @@ import { areAllEqual, sortNumsAsc } from './../collections';
 import { isBetweenInclusive } from './range';
 
 export * from './consts';
-export * from './range';
 export * from './random';
+export * from './range';
 
 /**
  * 
