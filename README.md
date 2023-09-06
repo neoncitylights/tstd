@@ -1,8 +1,6 @@
-# `@neoncitylights/stdlib`
+# `@neoncitylights/tstd`
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Node.js workflow](https://github.com/neoncitylights/ts-stdlib/actions/workflows/main.yml/badge.svg)](https://github.com/neoncitylights/ts-stdlib/actions/workflows/main.yml)
-
-This package's name is currently a WIP. Currently contains a somewhat random assortion of utilities in TypeScript.
+[![Node.js workflow](https://github.com/neoncitylights/tstd/actions/workflows/main.yml/badge.svg)](https://github.com/neoncitylights/tstd/actions/workflows/main.yml)
 
 Most of this code was originally written back in 2021-ish in a private repository, which I've recently decided to take the time to clean it up and republish. 😋
 
@@ -12,7 +10,7 @@ Most of this code was originally written back in 2021-ish in a private repositor
 > This package is not actually published on NPM yet, but will be soon!
 
 ```
-npm install @neoncitylights/stdlib
+npm install @neoncitylights/tstd
 ```
 
 ## License

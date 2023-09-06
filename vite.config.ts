@@ -6,8 +6,8 @@ export default defineConfig({
 	build: {
 		lib: {
 			entry: path.resolve(__dirname, 'src/index.ts'),
-			name: 'neoncitylights_stdlib',
-			fileName: (format) => `neoncitylights_stdlib.${format}.js`
+			name: 'neoncitylights_tstd',
+			fileName: (format) => `neoncitylights_tstd.${format}.js`
 		}
 	},
 	plugins: [
