@@ -1,4 +1,5 @@
 import { expect, test } from 'vitest';
+
 import {ArgumentError, DivideByZeroError, ParseError} from '../src/exceptions';
 
 test('ArgumentError throws correctly', () => {

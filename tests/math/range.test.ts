@@ -1,15 +1,16 @@
 import { describe, expect, test } from 'vitest';
+
 import {
+	clampF32,
 	clampI8,
 	clampI16,
 	clampI32,
 	clampU8,
 	clampU16,
 	clampU32,
-	isBetweenInclusive,
-	clampF32,
-	F32_MIN,
 	F32_MAX,
+	F32_MIN,
+	isBetweenInclusive,
 } from '../../src/math';
 
 describe('isBetweenInclusive()', () => {
@@ -30,32 +31,32 @@ describe('clamp', () => {
 	describe('signed', () => {
 		test('8-bit integer', () => {
 			expectToBeBetweenInclusive(clampI8(240), -128, 127);
-		})
+		});
 		test('16-bit integer', () => {
 			expectToBeBetweenInclusive(clampI16(40000), -32768, 32767);
 			
-		})
+		});
 		test('32-bit integer', () => {
 			expectToBeBetweenInclusive(clampI32(3000000000), -2147483648, 2147483647);
-		})
-	})
+		});
+	});
 
 	describe('unsigned', () => {
 		test('8-bit integer', () => {
 			expectToBeBetweenInclusive(clampU8(300), 0, 255);
-		})
+		});
 		test('16-bit integer', () => {
 			expectToBeBetweenInclusive(clampU16(70000), 0, 65535);
-		})
+		});
 		test('32-bit integer', () => {
 			expectToBeBetweenInclusive(clampU32(5000000000), 0, 4294967295);
-		})
-	})
+		});
+	});
 
 	test('32-bit float', () => {
 		expectToBeBetweenInclusive(clampF32(0.5), F32_MIN, F32_MAX);
-	})
-})
+	});
+});
 
 function expectToBeBetweenInclusive(
 	value: number,
