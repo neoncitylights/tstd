@@ -19,12 +19,13 @@
 		"type": "individual",
 		"url": "https://github.com/sponsors/neoncitylights"
 	},
+	"type": "module",
 	"module": "./dist/tstd.js",
 	"types": "./dist/index.d.ts",
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
-			"import": "./dist/tstd.mjs"
+			"import": "./dist/tstd.js"
 		}
 	},
 	"files": [
@@ -50,6 +51,7 @@
 		"lint:es": "eslint src --ext .ts,.tsx",
 		"lint:es-fix": "npm run lint -- --fix",
 		"lint:es-env": "eslint --env-info",
+		"prelint:pub": "npm run build",
 		"lint:pub": "publint",
 		"lint:pub-env": "publint --env",
 		"prepare": "npm run build",
