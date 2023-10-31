@@ -19,15 +19,14 @@
 		"type": "individual",
 		"url": "https://github.com/sponsors/neoncitylights"
 	},
-	"main": "./dist/neoncitylights_tstd.umd.js",
-	"module": "./dist/neoncitylights_tstd.es.js",
+	"module": "./dist/tstd.js",
+	"types": "./dist/index.d.ts",
 	"exports": {
 		".": {
-			"import": "./dist/neoncitylights_tstd.es.js",
-			"require": "./dist/neoncitylights_tstd.umd.js"
+			"types": "./dist/index.d.ts",
+			"import": "./dist/tstd.mjs"
 		}
 	},
-	"types": "./dist/index.d.ts",
 	"files": [
 		"dist"
 	],
@@ -47,8 +46,12 @@
 		"test:ui": "npm run test -- --ui",
 		"test:watch": "npm run test -- --watch",
 		"test:all": "npm run test:ci && npm run lint",
-		"lint": "eslint src --ext .ts,.tsx",
-		"lint:fix": "npm run lint -- --fix",
+		"lint": "npm run lint:es && npm run lint:pub",
+		"lint:es": "eslint src --ext .ts,.tsx",
+		"lint:es-fix": "npm run lint -- --fix",
+		"lint:es-env": "eslint --env-info",
+		"lint:pub": "publint",
+		"lint:pub-env": "publint --env",
 		"prepare": "npm run build",
 		"prepublishOnly": "npm run test:all",
 		"preversion": "npm run lint",
@@ -61,6 +64,7 @@
 		"eslint": "8.50.0",
 		"eslint-config-neoncitylights": "^0.2.0",
 		"gh-pages": "6.0.0",
+		"publint": "^0.2.5",
 		"typedoc": "0.25.1",
 		"typescript": "5.2.2",
 		"vite": "^4.4.9",

@@ -1,4 +1,4 @@
-import { ArrayIterFn, Primitive } from '.';
+import type { ArrayIterFn, Primitive } from '.';
 import { ArgumentError } from './exceptions';
 
 /**
