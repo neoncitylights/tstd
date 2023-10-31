@@ -48,7 +48,7 @@
 		"test:watch": "npm run test -- --watch",
 		"test:all": "npm run test:ci && npm run lint",
 		"lint": "npm run lint:es && npm run lint:pub",
-		"lint:es": "eslint src --ext .ts,.tsx",
+		"lint:es": "eslint . --ext .ts,.tsx",
 		"lint:es-fix": "npm run lint -- --fix",
 		"lint:es-env": "eslint --env-info",
 		"prelint:pub": "npm run build",

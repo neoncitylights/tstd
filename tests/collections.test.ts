@@ -1,4 +1,6 @@
 import { describe, expect, test } from 'vitest';
+
+import { ArgumentError } from '../src/exceptions';
 import {
 	areAllApproxEqual,
 	areAllEqual,
@@ -10,7 +12,6 @@ import {
 	sortNumsAsc,
 	sortNumsDesc,
 } from './../src/collections';
-import { ArgumentError } from '../src/exceptions';
 
 describe('areAllApproxEqual()', () => {
 	test('all numbers in array are all approximately equal to each other', () => {

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'vitest';
+
 import { chunkString, getNGrams, truncateString, truncateStringMiddle } from './../src/strings';
 
 describe('chunkString()', () => {

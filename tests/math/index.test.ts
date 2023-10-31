@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'vitest';
+
 import { getAbsoluteFrequency, getArithmeticMean, getMedian, getMode, getStandardDeviation } from '../../src/math';
 
 describe('getAbsoluteFrequency()', () => {
