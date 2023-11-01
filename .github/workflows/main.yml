@@ -17,7 +17,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Install Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
@@ -68,7 +68,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Install Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: latest
           cache: 'npm'
@@ -89,7 +89,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Install Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: latest
           cache: 'npm'
@@ -109,7 +109,7 @@ jobs:
   #     - name: Checkout repository
   #       uses: actions/checkout@v4
   #     - name: Install Node.js
-  #       uses: actions/setup-node@v3
+  #       uses: actions/setup-node@v4
   #       with:
   #         node-version: latest
   #         cache: 'npm'
